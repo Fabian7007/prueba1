@@ -1,0 +1,48 @@
+<header class="header" id="header">
+  <div class="logo">
+    <img src="images/logo1.png" alt="Logo" class="logo-img" />
+    <h1 class="header-title">Accesorios De Pelo</h1>
+    <p class="header-subtitle">
+      ¡Encuentra los mejores accesorios para tu estilo!
+    </p>
+  </div>
+
+  <!-- Categorías en PC -->
+  <nav class="categories categories-pc">
+    <div class="menu-rectangle">
+      <ul class="categories-list">
+        <li><a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+        <li><a href="#moños" onclick="mostrarSeccion('moños')">Moños</a></li>
+        <li><a href="#lazos" onclick="mostrarSeccion('lazos')">Lazos</a></li>
+        <li>
+          <a href="#scrunchies" onclick="mostrarSeccion('scrunchies')"
+            >Scrunchies</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Menú desplegable en móvil -->
+  <div class="categories-rect categories-mobile">
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="categories-dropdown" id="categoriesDropdown">
+      <div class="categories-item">
+        <a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a>
+      </div>
+      <div class="categories-item">
+        <a href="#moños" onclick="mostrarSeccion('moños')">Moños</a>
+      </div>
+      <div class="categories-item">
+        <a href="#lazos" onclick="mostrarSeccion('lazos')">Lazos</a>
+      </div>
+      <div class="categories-item">
+        <a href="#scrunchies" onclick="mostrarSeccion('scrunchies')"
+          >Scrunchies</a
+        >
+      </div>
+    </div>
+  </div>
+</header>

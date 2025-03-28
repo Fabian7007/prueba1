@@ -1,0 +1,105 @@
+/* Reset de estilos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuración del body */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* Asegura que el contenido principal ocupe el espacio restante */
+}
+
+/* Configuración del encabezado */
+.header {
+  background: linear-gradient(
+    45deg,
+    #ff66b2,
+    #ff99cc
+  ); /* Fondo degradado estático */
+  padding: 20px 10px;
+  color: white;
+  text-align: center;
+  position: relative;
+  border-bottom: 2px solid #ddd;
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+/* Efecto de resaltado para la sección objetivo */
+.highlight {
+  animation: highlightEffect 1s ease;
+}
+
+@keyframes highlightEffect {
+  0% {
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Centrar los títulos y párrafos de las secciones */
+.catalog-section {
+  text-align: center; /* Centra el contenido */
+  padding: 40px 20px; /* Espaciado interno */
+}
+
+.catalog-section h2 {
+  font-family: "Poppins", sans-serif; /* Tipografía moderna */
+  font-size: 2rem; /* Tamaño del título */
+  font-weight: 600; /* Negrita */
+  color: #333; /* Color oscuro */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.catalog-section p {
+  font-family: "Poppins", sans-serif; /* Tipografía moderna */
+  font-size: 1rem; /* Tamaño del texto */
+  color: #555; /* Color gris */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Tipografía negrita para las secciones del menú */
+.categories-list li a,
+.categories-item a {
+  font-family: "Poppins", sans-serif; /* Tipografía moderna */
+  font-weight: bold; /* Negrita */
+  font-size: 1.2rem; /* Tamaño del texto */
+  color: white; /* Color blanco */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.categories-list li a:hover,
+.categories-item a:hover {
+  background-color: #ff99cc; /* Fondo rosa claro */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Ajustar el menú en el celular */
+.categories-mobile {
+  margin-top: 20px; /* Espaciado respecto al subtítulo */
+}
+
+.categories-dropdown {
+  margin-top: 10px; /* Espaciado interno */
+}
+
+/* Espaciado simétrico para el subtítulo */
+.header-subtitle {
+  margin-bottom: 20px; /* Espaciado inferior */
+}

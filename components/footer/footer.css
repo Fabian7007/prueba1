@@ -1,0 +1,124 @@
+/* Reinicia márgenes y rellenos del body y html */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Asegura que el body ocupe toda la altura */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Eliminamos las animaciones de los lazos y brillos */
+@keyframes move-bows {
+  /* Eliminado */
+}
+
+@keyframes sparkle-animation {
+  /* Eliminado */
+}
+
+.bow-shape,
+.sparkle {
+  display: none; /* Ocultamos cualquier elemento relacionado con animaciones */
+}
+
+/* Eliminamos las referencias a las animaciones */
+.footer .bow-shape {
+  /* Eliminado */
+}
+
+.footer .sparkle {
+  /* Eliminado */
+}
+
+/* Footer */
+.footer {
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  display: flex; /* Activa Flexbox */
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  padding: 20px; /* Espaciado interno */
+  position: fixed; /* Fija el footer al final de la página */
+  bottom: 0; /* Posición en la parte inferior */
+  left: 0; /* Alineado al borde izquierdo */
+  width: 100%; /* Ocupa todo el ancho de la página */
+  z-index: 10; /* Asegura que esté encima de otros elementos */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra superior */
+}
+
+/* Íconos sociales */
+.footer .social-icons {
+  display: flex; /* Activa Flexbox para los íconos */
+  justify-content: center; /* Centra los íconos horizontalmente */
+  align-items: center; /* Centra los íconos verticalmente */
+  gap: 20px; /* Espaciado entre íconos */
+  margin-bottom: 10px; /* Espaciado debajo de los íconos */
+}
+
+.footer .social-icons a {
+  color: white; /* Color blanco por defecto */
+  font-size: 1.8rem; /* Tamaño de los íconos */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.footer .social-icons a:hover {
+  color: #ff66b2; /* Color destacado al pasar el mouse */
+  transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+}
+
+/* Notificación */
+.footer .notification {
+  background-color: #ff66b2; /* Fondo rosa */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 0.9rem; /* Tamaño del texto */
+  text-align: center; /* Centra el texto */
+  margin-top: 10px; /* Espaciado superior */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Derechos de autor */
+.footer p {
+  margin: 0; /* Elimina márgenes */
+  font-size: 0.9rem; /* Tamaño de texto más pequeño */
+  text-align: center; /* Centra el texto */
+}
+
+/* Notificación de compartir */
+.notification {
+  background: linear-gradient(45deg, #ff66b2, #ff99cc); /* Fondo degradado */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 0.9rem; /* Tamaño del texto */
+  text-align: center; /* Centra el texto */
+  position: fixed; /* Fija la notificación */
+  bottom: 80px; /* Posición sobre el footer */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta el centrado */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  z-index: 100; /* Asegura que esté encima de otros elementos */
+  display: none; /* Oculta la notificación por defecto */
+  animation: fadeInOut 3s ease; /* Animación de entrada y salida */
+}
+
+/* Animación de entrada y salida */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}

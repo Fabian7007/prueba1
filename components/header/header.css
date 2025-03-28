@@ -1,0 +1,239 @@
+/* General */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Tipografía uniforme */
+}
+
+/* Encabezado */
+.header {
+  background: linear-gradient(
+    45deg,
+    #ff66b2,
+    #ff99cc
+  ); /* Fondo degradado estático */
+  padding: 20px 10px;
+  color: white;
+  text-align: center;
+  position: relative;
+  border-bottom: 2px solid #ddd;
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+/* Estilo para el logo */
+.logo-img {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+/* Título con efecto neón */
+.header-title {
+  font-size: 2.5rem;
+  color: white; /* Color blanco para el texto */
+  text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff66b2, 0 0 20px #ff66b2,
+    0 0 40px #ff66b2, 0 0 80px #ff66b2; /* Efecto neón */
+  margin: 0;
+  animation: neonGlow 1.5s infinite alternate; /* Animación de brillo */
+}
+
+/* Subtítulo */
+.header-subtitle {
+  font-size: 1.2rem;
+  color: white; /* Color blanco para el texto */
+  margin: 5px 0 0;
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Menú en PC */
+.categories-pc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.menu-rectangle {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco transparente */
+  border: 2px solid white; /* Marco blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 20px; /* Tamaño uniforme para PC y móvil */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  width: auto; /* Ajusta el ancho al contenido */
+  text-align: center;
+}
+
+.categories-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categories-list li a {
+  font-family: "Poppins", sans-serif; /* Tipografía moderna */
+  font-weight: bold; /* Negrita */
+  font-size: 1.2rem; /* Tamaño del texto */
+  color: white; /* Color blanco */
+  text-decoration: none; /* Sin subrayado */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.categories-list li a:hover {
+  background-color: #ff99cc; /* Fondo rosa claro */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Resaltar la sección activa */
+.categories-list li a.active,
+.categories-item a.active {
+  color: #ff66b2; /* Color rosa intenso para la sección activa */
+}
+
+/* Elimina la línea rosa de tachado */
+.categories-list li span::before {
+  content: none; /* Elimina cualquier pseudo-elemento */
+}
+
+/* Menú en móvil */
+.categories-mobile {
+  display: none; /* Oculta el índice móvil por defecto */
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco transparente */
+  border: 2px solid white; /* Marco blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  width: auto; /* Ajusta el ancho al contenido */
+  margin-top: 30px; /* Baja el menú respecto al subtítulo */
+}
+
+.categories-mobile .menu-toggle {
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px; /* Baja el ícono respecto al menú */
+}
+
+.categories-dropdown {
+  display: none; /* Oculta el menú desplegable inicialmente */
+  flex-direction: column;
+  width: auto; /* Ajusta el ancho al contenido */
+  margin-top: 10px; /* Espaciado interno */
+}
+
+.categories-dropdown.show {
+  display: flex; /* Muestra el menú desplegable */
+}
+
+.categories-item {
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold; /* Texto en negrita */
+  color: white;
+  font-size: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Línea estética */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.categories-item:first-child {
+  border-top: none; /* Elimina la línea superior del primer elemento */
+}
+
+.categories-item a {
+  font-family: "Poppins", sans-serif; /* Tipografía moderna */
+  font-weight: bold; /* Negrita */
+  font-size: 1.2rem; /* Tamaño del texto */
+  color: white; /* Color blanco */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s ease;
+}
+
+.categories-item a.active {
+  color: #000000; /* Color rosa intenso para la sección activa */
+}
+
+.categories-item a:hover {
+  color: #ff99cc; /* Color rosa claro al pasar el mouse */
+}
+
+/* Animación de brillo para el efecto neón */
+@keyframes neonGlow {
+  from {
+    text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff66b2, 0 0 20px #ff66b2,
+      0 0 40px #ff66b2, 0 0 80px #ff66b2;
+  }
+  to {
+    text-shadow: 0 0 10px #ff66b2, 0 0 20px #ff66b2, 0 0 30px #ff66b2,
+      0 0 50px #ff66b2, 0 0 100px #ff66b2;
+  }
+}
+
+/* Eliminamos las partículas y elementos flotantes */
+.particle,
+.star,
+.bow-shape {
+  display: none; /* Ocultamos cualquier elemento relacionado con animaciones */
+}
+
+/* Botón de modo oscuro */
+.dark-mode-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.8em;
+  transition: color 0.3s ease;
+}
+.dark-mode-toggle:hover {
+  color: #ccc;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 5px;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+  }
+
+  .logo-img {
+    max-width: 80px;
+  }
+
+  .categories-pc {
+    display: none; /* Oculta las categorías de PC en móvil */
+  }
+
+  .categories-mobile {
+    display: flex; /* Muestra el índice móvil */
+  }
+
+  .menu-toggle {
+    display: block; /* Muestra el ícono de índice en móvil */
+  }
+
+  .categories-dropdown {
+    display: none; /* Oculta el menú desplegable inicialmente */
+    flex-direction: column;
+    width: 100%; /* Ocupa todo el ancho del encabezado */
+  }
+
+  .categories-dropdown.show {
+    display: flex; /* Muestra el menú desplegable al activarlo */
+  }
+}
